@@ -1,0 +1,6 @@
+#!/bin/bash
+#printing name and salary of each employee
+echo "Enter file name"
+read file
+
+awk 'BEGIN { print "NAME\tSALARY" } /hod/ {print $1"\t"$2}' $file
