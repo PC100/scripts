@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "Enter number"
+read num
+len=${#num}
+#echo $len
+sum=0
+num2=$num
+
+while [ $num2 -ne 0 ]
+do
+  rem=$((num2%10))
+  num2=$((num2/10))
+  pow=$((rem**len))
+  #echo $pow
+  sum=$((sum+pow))
+done
+
+if [[ $sum -eq $num ]]
+then
+  echo "$num is an armstrong number"
+else
+   echo "$num is not an armstrong number"
+fi 
