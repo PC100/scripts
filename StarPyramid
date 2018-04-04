@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Enter number of lines to print"
+read num
+
+for ((i=1;i<=$num;i++))
+do
+  for ((k=$i;k<=$num;k++))
+  do
+     printf " "
+  done
+  for ((j=1;j<=$((2*i-1));j++))
+  do
+     printf "*"
+  done
+  echo
+done
