@@ -1,0 +1,5 @@
+#!/bin/bash
+#Send today's data filtered by country to new files
+#dt=`date +%m-%d-%y`
+#grep "$dt" Info > InfoToday
+awk -F"\t" 'NR>1 {a[$2]=a[$2] ? a[$2]"\n"$1"\t"$3 : "\n"$1"\t"$3 } END { for (i in a) { if(i!=null) print "Name\tDate"a[i] > i }}' Info

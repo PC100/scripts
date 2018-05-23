@@ -3,5 +3,5 @@ if [[ -d $1 ]]
 then
     echo "directory"
 else
-   echo "whatever"
+   echo "not a directory"
 fi

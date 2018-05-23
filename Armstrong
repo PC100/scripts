@@ -1,7 +1,8 @@
 #!/bin/bash
 
-echo "Enter number"
-read num
+#echo "Enter number"
+#read num
+num=$1
 len=${#num}
 #echo $len
 sum=0
@@ -15,10 +16,14 @@ do
   #echo $pow
   sum=$((sum+pow))
 done
-
 if [[ $sum -eq $num ]]
 then
+  chk=1
   echo "$num is an armstrong number"
 else
-   echo "$num is not an armstrong number"
-fi 
+  chk=0
+  echo "$num is not an armstrong number"
+fi
+
+echo "check=$chk" > armstrong_file.txt
+echo "number=$num" >> armstrong_file.txt 

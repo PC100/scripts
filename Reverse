@@ -1,7 +1,12 @@
 #!bin/bash
-echo "Enter the number"
-read num
 
+if [ $# -eq 0 ]
+then
+  echo "Enter the number"
+  read num 
+else
+  num=$1
+fi
 num2=$num
 rev=0
 
@@ -12,4 +17,5 @@ do
    num2=$((num2 / 10))
 done
 
-echo "reverse of $num is $rev" 
+echo "reverse of $num is $rev"
+echo "rvrs=$rev" > ./rev_store.txt 

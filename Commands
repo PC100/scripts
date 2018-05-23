@@ -1,0 +1,7 @@
+#!bin/bash
+echo -n "present working directory: " 
+pwd
+echo -n "user: "
+whoami
+echo -n "host: "
+hostname
