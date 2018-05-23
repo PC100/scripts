@@ -1,1 +1,1 @@
-# maven_hello_world
+# scripts
